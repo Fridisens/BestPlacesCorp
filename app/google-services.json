@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "582732198757",
+    "project_id": "bestplacescorp",
+    "storage_bucket": "bestplacescorp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582732198757:android:7a87a4c5b720933532278c",
+        "android_client_info": {
+          "package_name": "com.example.bestplacescorp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt5rq5GeFFit54omQOYQHAM4ju3pPJIqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
