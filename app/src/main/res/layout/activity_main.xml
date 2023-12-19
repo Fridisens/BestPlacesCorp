@@ -13,8 +13,11 @@
         android:layout_height="80dp"
         android:layout_marginTop="28dp"
         android:fontFamily="serif-monospace"
-        android:text="Smultronställen"
+        android:text="Smultronställen Sverige"
+        android:textAlignment="center"
+        android:textColor="#0E0B0B"
         android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +29,7 @@
         android:layout_marginBottom="50dp"
         android:fontFamily="serif-monospace"
         android:text="Fridisarnas Corp"
+        android:textColor="#F2F4F6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -38,6 +42,7 @@
         android:backgroundTint="#009688"
         android:fontFamily="serif-monospace"
         android:text="Gå vidare"
+        android:textColor="#0B0909"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
