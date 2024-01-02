@@ -1,10 +1,12 @@
 package com.example.bestplacescorp
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
 import android.util.Log
+import android.widget.Button
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.common.api.internal.IStatusCallback
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -19,9 +21,21 @@ class MainActivity : AppCompatActivity() {
     lateinit var locationProvider : FusedLocationProviderClient
     lateinit var locationRequest : LocationRequest
     lateinit var locationCallback: LocationCallback
+
+
+    lateinit var beginButton: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        beginButton = findViewById(R.id.beginButton)
+
+        beginButton.setOnClickListener{
+            val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+        }
+
 
         locationProvider = LocationServices.getFusedLocationProviderClient(this)
         locationRequest = LocationRequest.Builder(2000).build()
@@ -39,8 +53,9 @@ class MainActivity : AppCompatActivity() {
                 REQUEST_LOCATION
             )
         }
-
     }
+
+
 
     override fun onResume() {
         super.onResume()
@@ -74,7 +89,5 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
-
-
     }
 }
