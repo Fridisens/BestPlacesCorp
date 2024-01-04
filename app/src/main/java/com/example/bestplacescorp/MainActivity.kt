@@ -24,15 +24,22 @@ class MainActivity : AppCompatActivity() {
 
 
     lateinit var beginButton: Button
+    lateinit var addButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         beginButton = findViewById(R.id.beginButton)
+        addButton = findViewById(R.id.addButton)
 
         beginButton.setOnClickListener{
             val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+         }
+
+        addButton.setOnClickListener {
+            val intent = Intent(this, CreateAndSignInActivity::class.java)
             startActivity(intent)
         }
 
