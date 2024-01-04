@@ -7,13 +7,16 @@ import android.os.Bundle
 import android.os.Looper
 import android.util.Log
 import android.widget.Button
+import android.widget.EditText
 import androidx.core.app.ActivityCompat
-import com.google.android.gms.common.api.internal.IStatusCallback
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,9 +25,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var locationRequest : LocationRequest
     lateinit var locationCallback: LocationCallback
 
-
     lateinit var beginButton: Button
     lateinit var addButton: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +45,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, CreateAndSignInActivity::class.java)
             startActivity(intent)
         }
-
 
         locationProvider = LocationServices.getFusedLocationProviderClient(this)
         locationRequest = LocationRequest.Builder(2000).build()

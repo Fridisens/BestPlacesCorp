@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/emailTextView"
+        android:id="@+id/emailEditText"
         android:layout_width="211dp"
         android:layout_height="54dp"
         android:layout_marginTop="160dp"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/accountTextView" />
 
     <EditText
-        android:id="@+id/passwordTextView"
+        android:id="@+id/passwordEditText"
         android:layout_width="210dp"
         android:layout_height="58dp"
         android:layout_marginTop="44dp"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
     <Button
         android:id="@+id/signInButton"
@@ -63,7 +63,7 @@
         app:layout_constraintEnd_toStartOf="@+id/signUpButton"
         app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
     <Button
         android:id="@+id/signUpButton"
@@ -76,5 +76,5 @@
         android:text="Skapa upp"
         android:textColor="#0B0909"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
