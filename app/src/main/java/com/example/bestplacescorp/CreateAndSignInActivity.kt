@@ -2,9 +2,11 @@ package com.example.bestplacescorp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Message
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.auth.ktx.auth
@@ -66,11 +68,20 @@ class CreateAndSignInActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener{ task ->
                 if(task.isSuccessful){
+                    showSignUpToast("Konto skapat! Du kan nu logga in!")
                     Log.d("!!!", "create success")
                 } else {
+                    showSignUpToast("Misslyckades att skapa konto, försök igen. ${task.exception?.message}")
                     Log.d("!!!", "User not created ${task.exception}")
                 }
             }
     }
+
+    fun showSignUpToast(message: String) {
+        val toast = Toast.makeText(this, message, Toast.LENGTH_SHORT)
+        toast.show()
+
+    }
+
 
 }
