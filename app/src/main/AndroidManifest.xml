@@ -16,6 +16,9 @@
         android:theme="@style/Theme.BestPlacesCorp"
         tools:targetApi="31">
         <activity
+            android:name=".ListOfPlacesActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddedPlaceDoneActivity"
             android:exported="false" />
         <activity

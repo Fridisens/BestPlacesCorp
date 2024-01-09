@@ -4,9 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 
 class AddPlaceActivity : AppCompatActivity() {
 
+   private val db = FirebaseFirestore.getInstance()
 
     lateinit var addSignedInButton : Button
     lateinit var goBackButton: Button
