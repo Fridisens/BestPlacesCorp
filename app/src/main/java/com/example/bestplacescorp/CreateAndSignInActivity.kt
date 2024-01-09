@@ -1,5 +1,6 @@
 package com.example.bestplacescorp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Message
@@ -18,6 +19,9 @@ class CreateAndSignInActivity : AppCompatActivity() {
     lateinit var auth: FirebaseAuth
     lateinit var emailView : EditText
     lateinit var passwordView : EditText
+    lateinit var signInButton: Button
+    lateinit var signUpButton: Button
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,14 +32,16 @@ class CreateAndSignInActivity : AppCompatActivity() {
         emailView = findViewById(R.id.emailEditText)
         passwordView = findViewById(R.id.passwordEditText)
 
-        val signUpButton = findViewById<Button>(R.id.signUpButton)
+        signUpButton = findViewById<Button>(R.id.signUpButton)
         signUpButton.setOnClickListener {
             signUp()
         }
 
-        val signInButton = findViewById<Button>(R.id.signInButton)
+        signInButton = findViewById<Button>(R.id.signInButton)
         signInButton.setOnClickListener {
             signIn()
+            val intent = Intent(this, AddPlaceActivity::class.java)
+            startActivity(intent)
         }
     }
 

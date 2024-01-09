@@ -2,46 +2,48 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OtherInfoFragment" >
+    android:background="@drawable/swedishbackground2"
+    tools:context=".AddedPlaceDoneActivity">
 
     <TextView
-        android:id="@+id/OtherTextView"
+        android:id="@+id/doneTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="serif-monospace"
-        android:text="Övrig info"
-        android:textSize="34sp"
+        android:text="Klart! Ditt smultronställe är nu tillagt!"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editPlainText"
-        android:layout_width="215dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="152dp"
-        android:ems="10"
-        android:hint="Övrig info"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/OtherTextView" />
-
     <Button
-        android:id="@+id/saveAllButton"
+        android:id="@+id/addMoreButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:backgroundTint="#009688"
         android:fontFamily="serif-monospace"
-        android:text="Spara allt"
+        android:text="Lägg till fler"
         android:textColor="#0B0909"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPlainText" />
+        app:layout_constraintTop_toBottomOf="@+id/doneTextView" />
+
+    <Button
+        android:id="@+id/ListofPlacesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#009688"
+        android:fontFamily="serif-monospace"
+        android:text="Lista smultronställen hos oss"
+        android:textColor="#0B0909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addMoreButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

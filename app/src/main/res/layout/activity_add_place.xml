@@ -4,48 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/swedishbackground2"
     tools:context=".AddPlaceActivity">
 
-    <Button
-        android:id="@+id/addSignedInButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:backgroundTint="#009688"
-        android:fontFamily="serif-monospace"
-        android:text="Lägg till"
-        android:textColor="#0B0909"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/swedishbackground2"
+        tools:context=".AddplaceActivity">
 
-    <Button
-        android:id="@+id/goBackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="352dp"
-        android:layout_marginEnd="48dp"
-        android:backgroundTint="#009688"
-        android:fontFamily="serif-monospace"
-        android:text="Tillbaka"
-        android:textColor="#0B0909"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
+        <Button
+            android:id="@+id/addSignedInButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:backgroundTint="#009688"
+            android:fontFamily="serif-monospace"
+            android:text="Lägg till"
+            android:textColor="#0B0909"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
 
-    <TextView
-        android:id="@+id/infoTextView"
-        android:layout_width="352dp"
-        android:layout_height="197dp"
-        android:layout_marginTop="50dp"
-        android:fontFamily="serif-monospace"
-        android:text="Nu när du är inloggad kan du lägga till egna smultronställen till vår sida. Tryck Lägg till så kommer du få olika frågor som du behöver besvara för att vi ska få den bästa recensionen för våra kunder. "
-        android:textAlignment="center"
-        android:textColor="#FAF2F2"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/goBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="296dp"
+            android:layout_marginEnd="148dp"
+            android:backgroundTint="#009688"
+            android:fontFamily="serif-monospace"
+            android:text="Tillbaka"
+            android:textColor="#0B0909"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
 
+        <TextView
+            android:id="@+id/infoTextView"
+            android:layout_width="352dp"
+            android:layout_height="197dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="serif-monospace"
+            android:text="Nu när du är inloggad kan du lägga till egna smultronställen till vår sida. Tryck Lägg till så kommer du få olika frågor som du behöver besvara för att vi ska få den bästa recensionen för våra kunder. "
+            android:textAlignment="center"
+            android:textColor="#FAF2F2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/infoTextView2"
+            android:layout_width="352dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="376dp"
+            android:fontFamily="serif-monospace"
+            android:text="Det är viktigt att du är så ärlig som du bara kan i din recension då det bara är det bästa som publiceras här."
+            android:textAlignment="center"
+            android:textColor="#FAF2F2"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

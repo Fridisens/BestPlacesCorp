@@ -16,7 +16,25 @@
         android:theme="@style/Theme.BestPlacesCorp"
         tools:targetApi="31">
         <activity
+            android:name=".AddedPlaceDoneActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddPlaceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RateOtherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RateServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RateDrinkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RateFoodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RateNameActivity"
             android:exported="false" />
         <activity
             android:name=".CreateAndSignInActivity"

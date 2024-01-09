@@ -5,21 +5,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-class AddPlaceActivity : AppCompatActivity() {
+class AddedPlaceDoneActivity : AppCompatActivity() {
 
 
-    lateinit var addSignedInButton : Button
-    lateinit var goBackButton: Button
-
-
+    lateinit var addMoreButton : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_place)
+        setContentView(R.layout.activity_added_place_done)
 
-        addSignedInButton.findViewById<Button>(R.id.addSignedInButton)
-        goBackButton = findViewById(R.id.goBackButton)
+        addMoreButton.findViewById<Button>(R.id.addMoreButton)
 
-        addSignedInButton.setOnClickListener {
+
+        addMoreButton.setOnClickListener {
             val intent = Intent(this, RateNameActivity::class.java)
             startActivity(intent)
         }
