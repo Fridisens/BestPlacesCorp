@@ -16,8 +16,8 @@ class RateFoodActivity : AppCompatActivity() {
         setContentView(R.layout.activity_rate_food)
 
 
-        foodNextButton.findViewById<Button>(R.id.foodNextButton)
-        foodRatingBar.findViewById<RatingBar>(R.id.foodRatingBar)
+        foodNextButton = findViewById<Button>(R.id.foodNextButton)
+        foodRatingBar = findViewById<RatingBar>(R.id.foodRatingBar)
 
 
 

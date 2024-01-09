@@ -32,11 +32,11 @@ class CreateAndSignInActivity : AppCompatActivity() {
         emailView = findViewById(R.id.emailEditText)
         passwordView = findViewById(R.id.passwordEditText)
 
+
         signUpButton = findViewById<Button>(R.id.signUpButton)
         signUpButton.setOnClickListener {
             signUp()
         }
-
         signInButton = findViewById<Button>(R.id.signInButton)
         signInButton.setOnClickListener {
             signIn()

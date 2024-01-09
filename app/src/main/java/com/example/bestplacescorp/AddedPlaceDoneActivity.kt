@@ -13,7 +13,7 @@ class AddedPlaceDoneActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_added_place_done)
 
-        addMoreButton.findViewById<Button>(R.id.addMoreButton)
+        addMoreButton = findViewById<Button>(R.id.addMoreButton)
 
 
         addMoreButton.setOnClickListener {

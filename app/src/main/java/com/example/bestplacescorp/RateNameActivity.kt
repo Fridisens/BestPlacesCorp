@@ -16,7 +16,7 @@ class RateNameActivity : AppCompatActivity() {
         setContentView(R.layout.activity_rate_name)
 
 
-        nameNextButton.findViewById<Button>(R.id.nameNextButton)
+        nameNextButton = findViewById<Button>(R.id.nameNextButton)
 
         nameNextButton.setOnClickListener {
             val intent = Intent(this, RateFoodActivity::class.java)

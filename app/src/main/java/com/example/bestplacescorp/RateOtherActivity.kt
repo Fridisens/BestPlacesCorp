@@ -18,8 +18,8 @@ class RateOtherActivity : AppCompatActivity() {
         setContentView(R.layout.activity_rate_other)
 
 
-        editTextText.findViewById<EditText>(R.id.editTextText)
-        saveAllButton.findViewById<Button>(R.id.saveAllButton)
+        editTextText = findViewById<EditText>(R.id.editTextText)
+        saveAllButton = findViewById<Button>(R.id.saveAllButton)
 
 
         editTextText.addTextChangedListener { editable ->

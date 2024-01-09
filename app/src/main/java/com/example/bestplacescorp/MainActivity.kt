@@ -33,18 +33,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         FirebaseApp.initializeApp(this)
 
 
         beginButton = findViewById(R.id.beginButton)
         addButton = findViewById(R.id.addButton)
 
+
+
+
         beginButton.setOnClickListener{
+            Log.d("!!!", "Test mapsbutton")
             val intent = Intent(this, MapsActivity::class.java)
             startActivity(intent)
          }
 
         addButton.setOnClickListener {
+            Log.d("!!!", "pressed add button")
             val intent = Intent(this, CreateAndSignInActivity::class.java)
             startActivity(intent)
         }
@@ -85,8 +91,8 @@ class MainActivity : AppCompatActivity() {
 
     fun startLocationUpdates(){
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
-        == PackageManager.PERMISSION_GRANTED)
-        locationProvider.requestLocationUpdates(locationRequest, locationCallback, Looper.getMainLooper())
+            == PackageManager.PERMISSION_GRANTED)
+            locationProvider.requestLocationUpdates(locationRequest, locationCallback, Looper.getMainLooper())
     }
 
     override fun onRequestPermissionsResult(

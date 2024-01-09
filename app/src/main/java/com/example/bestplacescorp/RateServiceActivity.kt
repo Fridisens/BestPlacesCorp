@@ -14,8 +14,8 @@ class RateServiceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rate_service)
 
-        serviceNextButton.findViewById<Button>(R.id.serviceNextbutton)
-        serviceRatingBar.findViewById<RatingBar>(R.id.serviceRatingBar)
+        serviceNextButton = findViewById<Button>(R.id.serviceNextbutton)
+        serviceRatingBar = findViewById<RatingBar>(R.id.serviceRatingBar)
 
 
 

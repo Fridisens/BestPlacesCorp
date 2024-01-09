@@ -19,7 +19,7 @@ class AddPlaceActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_place)
 
-        addSignedInButton.findViewById<Button>(R.id.addSignedInButton)
+        addSignedInButton = findViewById<Button>(R.id.addSignedInButton)
         goBackButton = findViewById(R.id.goBackButton)
 
         addSignedInButton.setOnClickListener {
