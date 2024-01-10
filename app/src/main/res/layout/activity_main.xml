@@ -59,4 +59,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/beginButton" />
+
+    <Button
+        android:id="@+id/listAllRestaurantsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#009688"
+        android:fontFamily="serif-monospace"
+        android:text="Lista alla smultronställen"
+        android:textColor="#0B0909"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

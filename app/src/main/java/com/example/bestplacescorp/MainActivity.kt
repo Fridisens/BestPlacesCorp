@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var beginButton: Button
     lateinit var addButton: Button
+    lateinit var listAllRestaurantsButton: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         beginButton = findViewById(R.id.beginButton)
         addButton = findViewById(R.id.addButton)
+        listAllRestaurantsButton = findViewById(R.id.listAllRestaurantsButton)
 
 
 
@@ -47,6 +49,11 @@ class MainActivity : AppCompatActivity() {
 
         addButton.setOnClickListener {
             val intent = Intent(this, CreateAndSignInActivity::class.java)
+            startActivity(intent)
+        }
+
+        listAllRestaurantsButton.setOnClickListener {
+            val intent = Intent(this, ListOfPlacesRecyclerView::class.java)
             startActivity(intent)
         }
 

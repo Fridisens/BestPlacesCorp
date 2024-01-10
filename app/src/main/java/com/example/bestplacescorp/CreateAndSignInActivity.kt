@@ -61,10 +61,9 @@ class CreateAndSignInActivity : AppCompatActivity() {
                     val intent = Intent(this, AddPlaceActivity::class.java)
                     startActivity(intent)
                         finish()
-                } else {
-                        Log.d("!!!", "Inloggning misslyckades: ${task.exception?.message}")
-                        showSignUpToast("Inloggningen misslyckades: ${task.exception?.message} ")
                     }
+                } else {
+                    showSignUpToast("Inloggningen misslyckades: ${task.exception?.message} ")
                 }
 
             }
@@ -92,7 +91,7 @@ class CreateAndSignInActivity : AppCompatActivity() {
     }
 
     fun showSignUpToast(message: String) {
-        val toast = Toast.makeText(this, message, Toast.LENGTH_SHORT)
+        val toast = Toast.makeText(this, message, Toast.LENGTH_LONG)
         toast.show()
 
     }

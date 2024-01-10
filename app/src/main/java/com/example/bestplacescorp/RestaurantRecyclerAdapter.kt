@@ -25,7 +25,7 @@ class RestaurantRecyclerAdapter (val context: Context, val restaurants : List<Re
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val restaurant = restaurants[position]
 
-        holder.nameTextView.text
+        holder.nameTextView.text = restaurant.name
     }
 
 
