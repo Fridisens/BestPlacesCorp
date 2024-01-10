@@ -10,33 +10,35 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/swedishbackground2"
-        tools:context=".AddplaceActivity">
+        tools:context=".AddplaceActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <Button
             android:id="@+id/addSignedInButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
+            android:layout_width="131dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="152dp"
             android:backgroundTint="#009688"
             android:fontFamily="serif-monospace"
             android:text="Lägg till"
             android:textColor="#0B0909"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.541"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
 
         <Button
             android:id="@+id/goBackButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="292dp"
-            android:layout_marginEnd="140dp"
+            android:layout_width="116dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="312dp"
             android:backgroundTint="#009688"
             android:fontFamily="serif-monospace"
             android:text="Logga ut"
             android:textColor="#0B0909"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
 
         <TextView
