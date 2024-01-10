@@ -9,8 +9,6 @@ import com.google.firebase.ktx.Firebase
 
 class AddPlaceActivity : AppCompatActivity() {
 
-   private val db = FirebaseFirestore.getInstance()
-
     lateinit var addSignedInButton : Button
     lateinit var goBackButton: Button
 
@@ -26,5 +24,12 @@ class AddPlaceActivity : AppCompatActivity() {
             val intent = Intent(this, RateNameActivity::class.java)
             startActivity(intent)
         }
+
+        goBackButton.setOnClickListener {
+            val intent = Intent(this, CreateAndSignInActivity::class.java)
+            startActivity(intent)
+
+        }
     }
+
 }

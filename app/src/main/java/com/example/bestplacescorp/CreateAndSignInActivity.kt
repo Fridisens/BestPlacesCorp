@@ -40,34 +40,42 @@ class CreateAndSignInActivity : AppCompatActivity() {
         signInButton = findViewById<Button>(R.id.signInButton)
         signInButton.setOnClickListener {
             signIn()
-            val intent = Intent(this, AddPlaceActivity::class.java)
-            startActivity(intent)
         }
     }
 
     fun signIn() {
         val email = emailView.text.toString()
-        val password = passwordView.toString()
+        val password = passwordView.text.toString()
 
         if (email.isEmpty() || password.isEmpty()){
+            showSignUpToast("Fyll i både e-postadress och lösenord.")
             return
         }
 
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener{ task ->
                 if(task.isSuccessful){
-                    Log.d("!!!", "create success")
+                    Log.d("!!!", "Inloggning lyckades")
+                    val currentUser = Firebase.auth.currentUser
+                    if (currentUser != null) {
+                    val intent = Intent(this, AddPlaceActivity::class.java)
+                    startActivity(intent)
+                        finish()
                 } else {
-                    Log.d("!!!", "User not created ${task.exception}")
+                        Log.d("!!!", "Inloggning misslyckades: ${task.exception?.message}")
+                        showSignUpToast("Inloggningen misslyckades: ${task.exception?.message} ")
+                    }
                 }
+
             }
     }
 
     fun signUp(){
         val email = emailView.text.toString()
-        val password = passwordView.toString()
+        val password = passwordView.text.toString()
 
         if (email.isEmpty() || password.isEmpty()){
+            showSignUpToast("Fyll i både e-postadress och lösenord.")
             return
         }
 
@@ -75,10 +83,10 @@ class CreateAndSignInActivity : AppCompatActivity() {
             .addOnCompleteListener{ task ->
                 if(task.isSuccessful){
                     showSignUpToast("Konto skapat! Du kan nu logga in!")
-                    Log.d("!!!", "create success")
+                    Log.d("!!!", "Registrering lyckades")
                 } else {
                     showSignUpToast("Misslyckades att skapa konto, försök igen. ${task.exception?.message}")
-                    Log.d("!!!", "User not created ${task.exception}")
+                    Log.d("!!!", "Registrering misslyckades: ${task.exception}")
                 }
             }
     }
