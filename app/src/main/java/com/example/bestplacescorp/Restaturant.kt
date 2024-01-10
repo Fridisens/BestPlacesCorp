@@ -1,4 +1,5 @@
 package com.example.bestplacescorp
 
-class Restaturant (val name : String, ) {
+class Restaturant (val name : String = "" ) {
+
 }

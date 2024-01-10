@@ -24,14 +24,12 @@ class RestaurantRecyclerAdapter (val context: Context, val restaurants : List<Re
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val restaurant = restaurants[position]
-
         holder.nameTextView.text = restaurant.name
     }
 
 
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         var nameTextView = itemView.findViewById<TextView>(R.id.restaurantNameTextView)
-
     }
 
 }

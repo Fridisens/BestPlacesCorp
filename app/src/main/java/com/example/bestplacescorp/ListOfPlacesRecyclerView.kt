@@ -2,6 +2,7 @@ package com.example.bestplacescorp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
@@ -10,10 +11,11 @@ import com.google.firebase.ktx.Firebase
 
 class ListOfPlacesRecyclerView : AppCompatActivity() {
 
-    var restaurants = mutableListOf<Restaturant>()
-
+    var restaurants = mutableListOf<Restaturant>(
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_of_places_recycler_view)
 
@@ -28,7 +30,7 @@ class ListOfPlacesRecyclerView : AppCompatActivity() {
             .get()
             .addOnSuccessListener { querySnapshot ->
                 // Rensa befintliga data i listan innan du fyller på den
-                restaurants.clear()
+                //restaurants.clear()
 
                 for (document in querySnapshot.documents){
                     val restaturant = document.toObject(Restaturant::class.java)
@@ -36,6 +38,8 @@ class ListOfPlacesRecyclerView : AppCompatActivity() {
                         restaurants.add(it)
                     }
                 }
+
+                adapter.notifyDataSetChanged()
 
             }
     }
