@@ -30,8 +30,6 @@ class RestaurantRecyclerAdapter (val context: Context, val restaurants : List<Pl
         holder.moreInfoButton.setOnClickListener {
             onItemClick(restaurant)
         }
-
-
         }
 
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {

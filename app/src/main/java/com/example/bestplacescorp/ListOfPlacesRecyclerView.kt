@@ -30,9 +30,10 @@ class ListOfPlacesRecyclerView : AppCompatActivity() {
 
         recyclerView.layoutManager = layoutManager
 
-        val adapter = RestaurantRecyclerAdapter(this, restaurants){
-            selectedRestaurant ->
+        val adapter = RestaurantRecyclerAdapter(this, restaurants){ restaurant ->
             val intent = Intent(this, ShowMoreInfoAboutRestActivity::class.java)
+            intent.putExtra("restaurantName", restaurant.name)
+            intent.putExtra("restaurantOtherText", restaurant.otherText)
             startActivity(intent)
         }
         recyclerView.adapter = adapter
