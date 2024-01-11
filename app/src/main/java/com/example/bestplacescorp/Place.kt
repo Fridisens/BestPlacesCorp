@@ -1,9 +1,9 @@
 package com.example.bestplacescorp
 
 data class Place(
-    val name: String = "",
-    val foodRating : Float = 0.0f,
-    val drinkRating : Float = 0.0f,
-    val serviceRating : Float = 0.0f,
-    val otherText : String = ""
+    var name: String = "",
+    var foodRating : Float = 0.0f,
+    var drinkRating : Float = 0.0f,
+    var serviceRating : Float = 0.0f,
+    var otherText : String = ""
 )

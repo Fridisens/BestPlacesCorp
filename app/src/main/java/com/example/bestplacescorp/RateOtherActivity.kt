@@ -21,28 +21,22 @@ class RateOtherActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rate_other)
 
-
-
         editTextText = findViewById<EditText>(R.id.editTextText)
         saveAllButton = findViewById<Button>(R.id.saveAllButton)
 
 
         editTextText.setOnClickListener {
-            val placeOtherText = editTextText.text.toString()
-            val place = Place(otherText = placeOtherText)
-            db.collection("places")
-                .add(place)
-                .addOnSuccessListener { documentReference ->
-                    Log.d("!!!", "DocumentSnapshot added with ID: ${documentReference.id}")
-                    // Här kan du göra något när lagringen är framgångsrik
-                }
-                .addOnFailureListener { e ->
-                    Log.w("!!!", "Error adding document", e)
-                    // Här kan du hantera fel om lagringen misslyckas
-                }
+            PlaceDataManager.currentPlace.otherText = editTextText.text.toString()
         }
-
         saveAllButton.setOnClickListener {
+            PlaceDataManager.saveAllInformationToFirestore(
+                onSuccess = { documentId ->
+                    Log.d("!!!", "DocumentSnapshot added with ID: $documentId")
+                },
+                onFailure = { e ->
+                    Log.w("!!!", "Error adding document", e)
+                }
+            )
             val intent = Intent(this, AddedPlaceDoneActivity::class.java)
             startActivity(intent)
         }

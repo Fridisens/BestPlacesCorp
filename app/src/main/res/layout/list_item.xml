@@ -8,13 +8,13 @@
 
     <TextView
         android:id="@+id/restaurantNameTextView"
-        android:layout_width="220dp"
-        android:layout_height="30dp"
+        android:layout_width="266dp"
+        android:layout_height="29dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:text="TextView"
         android:textAllCaps="true"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
