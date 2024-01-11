@@ -9,11 +9,11 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="327dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="365dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="serif-monospace"
-        android:text="Smultronställen Sverige"
+        android:text="Smultronställen, Bästa restaurangerna i Sverige"
         android:textAlignment="center"
         android:textColor="#0E0B0B"
         android:textSize="34sp"
