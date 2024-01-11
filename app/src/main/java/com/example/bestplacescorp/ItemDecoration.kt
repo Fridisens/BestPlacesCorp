@@ -1,0 +1,18 @@
+package com.example.bestplacescorp
+
+import android.graphics.Rect
+import android.view.View
+import androidx.recyclerview.widget.RecyclerView
+class ItemDecoration (private  val spaceHeight: Int) : RecyclerView.ItemDecoration(){
+
+    override fun getItemOffsets(
+        outRect: Rect,
+        view: View,
+        parent: RecyclerView,
+        state: RecyclerView.State
+    ) {
+        // Lägger till mellanrum (topp/botten) till varje element i RecyclerView
+        outRect.top = spaceHeight
+        outRect.bottom = spaceHeight
+    }
+}

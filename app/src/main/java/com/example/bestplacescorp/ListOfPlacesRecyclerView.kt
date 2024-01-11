@@ -1,7 +1,9 @@
 package com.example.bestplacescorp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,8 +13,10 @@ import com.google.firebase.ktx.Firebase
 
 class ListOfPlacesRecyclerView : AppCompatActivity() {
 
-    var restaurants = mutableListOf<Restaturant>(
+    var restaurants = mutableListOf<Place>(
     )
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -22,8 +26,20 @@ class ListOfPlacesRecyclerView : AppCompatActivity() {
         var recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val adapter = RestaurantRecyclerAdapter(this, restaurants)
+        val layoutManager = LinearLayoutManager(this)
+
+        recyclerView.layoutManager = layoutManager
+
+        val adapter = RestaurantRecyclerAdapter(this, restaurants){
+            selectedRestaurant ->
+            val intent = Intent(this, ShowMoreInfoAboutRestActivity::class.java)
+            startActivity(intent)
+        }
         recyclerView.adapter = adapter
+
+        val spaceHeightInPixels = resources.getDimensionPixelSize(R.dimen.item_spacing)
+
+        recyclerView.addItemDecoration(ItemDecoration(spaceHeightInPixels))
 
         val firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
         firestore.collection("places")
@@ -33,7 +49,7 @@ class ListOfPlacesRecyclerView : AppCompatActivity() {
                 //restaurants.clear()
 
                 for (document in querySnapshot.documents){
-                    val restaturant = document.toObject(Restaturant::class.java)
+                    val restaturant = document.toObject(Place::class.java)
                     restaturant?.let {
                         restaurants.add(it)
                     }
