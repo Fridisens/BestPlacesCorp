@@ -14,7 +14,6 @@ class ShowMoreInfoAboutRestActivity : AppCompatActivity() {
     lateinit var restaurantOtherText: TextView
     lateinit var summaryRatingBar: RatingBar
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_more_info_about_rest)
@@ -23,7 +22,7 @@ class ShowMoreInfoAboutRestActivity : AppCompatActivity() {
         restaurantOtherText = findViewById(R.id.textView4)
         summaryRatingBar = findViewById(R.id.summaryRatingBar)
 
-       // get names from intents for each restaurant
+        // get names from intents for each restaurant
         val getRestaurantName = intent.getStringExtra("restaurantName")
         val getRestaurantOtherText = intent.getStringExtra("restaurantOtherText")
         val getFoodRating = intent.getFloatExtra("foodRating", 0.0f)
@@ -32,7 +31,6 @@ class ShowMoreInfoAboutRestActivity : AppCompatActivity() {
 
         restaurantName.text = getRestaurantName
         restaurantOtherText.text = getRestaurantOtherText
-
 
         val averageRating = (getFoodRating + getDrinkRating + getServiceRating) / 3.0
         summaryRatingBar.rating = averageRating.toFloat()

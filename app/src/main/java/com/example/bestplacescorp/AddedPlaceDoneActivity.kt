@@ -7,18 +7,15 @@ import android.widget.Button
 
 class AddedPlaceDoneActivity : AppCompatActivity() {
 
-
     lateinit var addMoreButton : Button
     lateinit var listOfPlacesButton: Button
     lateinit var goBackSignedInButton: Button
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_added_place_done)
 
-
-        addMoreButton = findViewById<Button>(R.id.addMoreButton)
+        addMoreButton = findViewById(R.id.addMoreButton)
         listOfPlacesButton = findViewById(R.id.listOfPlacesButton)
         goBackSignedInButton = findViewById(R.id.goBackSignedInButton)
 
@@ -36,7 +33,5 @@ class AddedPlaceDoneActivity : AppCompatActivity() {
             val intent = Intent(this, AddPlaceActivity::class.java)
             startActivity(intent)
         }
-
-
     }
 }

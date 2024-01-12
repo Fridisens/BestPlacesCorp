@@ -15,14 +15,11 @@ import com.google.firebase.ktx.Firebase
 
 class CreateAndSignInActivity : AppCompatActivity() {
 
-
     lateinit var auth: FirebaseAuth
     lateinit var emailView : EditText
     lateinit var passwordView : EditText
     lateinit var signInButton: Button
     lateinit var signUpButton: Button
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,11 +29,11 @@ class CreateAndSignInActivity : AppCompatActivity() {
         emailView = findViewById(R.id.emailEditText)
         passwordView = findViewById(R.id.passwordEditText)
 
-
         signUpButton = findViewById<Button>(R.id.signUpButton)
         signUpButton.setOnClickListener {
             signUp()
         }
+
         signInButton = findViewById<Button>(R.id.signInButton)
         signInButton.setOnClickListener {
             signIn()
@@ -58,8 +55,8 @@ class CreateAndSignInActivity : AppCompatActivity() {
                     Log.d("!!!", "Inloggning lyckades")
                     val currentUser = Firebase.auth.currentUser
                     if (currentUser != null) {
-                    val intent = Intent(this, AddPlaceActivity::class.java)
-                    startActivity(intent)
+                        val intent = Intent(this, AddPlaceActivity::class.java)
+                        startActivity(intent)
                         finish()
                     }
                 } else {
@@ -93,8 +90,5 @@ class CreateAndSignInActivity : AppCompatActivity() {
     fun showSignUpToast(message: String) {
         val toast = Toast.makeText(this, message, Toast.LENGTH_LONG)
         toast.show()
-
     }
-
-
 }

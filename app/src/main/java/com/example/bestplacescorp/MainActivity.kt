@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var locationRequest : LocationRequest
     lateinit var locationCallback: LocationCallback
 
-    lateinit var beginButton: Button
+
     lateinit var addButton: Button
     lateinit var listAllRestaurantsButton: Button
 
@@ -35,17 +35,10 @@ class MainActivity : AppCompatActivity() {
         FirebaseApp.initializeApp(this)
 
 
-        beginButton = findViewById(R.id.beginButton)
+
         addButton = findViewById(R.id.addButton)
         listAllRestaurantsButton = findViewById(R.id.listAllRestaurantsButton)
 
-
-
-
-        beginButton.setOnClickListener{
-            val intent = Intent(this, MapsActivity::class.java)
-            startActivity(intent)
-         }
 
         addButton.setOnClickListener {
             val intent = Intent(this, CreateAndSignInActivity::class.java)

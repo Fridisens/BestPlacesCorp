@@ -12,7 +12,6 @@ class AddPlaceActivity : AppCompatActivity() {
     lateinit var addSignedInButton : Button
     lateinit var goBackButton: Button
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_place)

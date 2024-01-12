@@ -11,19 +11,16 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class RateOtherActivity : AppCompatActivity() {
 
-
     lateinit var editTextText : EditText
     lateinit var saveAllButton : Button
     val db = FirebaseFirestore.getInstance()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rate_other)
 
-        editTextText = findViewById<EditText>(R.id.editTextText)
-        saveAllButton = findViewById<Button>(R.id.saveAllButton)
-
+        editTextText = findViewById(R.id.editTextText)
+        saveAllButton = findViewById(R.id.saveAllButton)
 
         editTextText.setOnClickListener {
             PlaceDataManager.currentPlace.otherText = editTextText.text.toString()

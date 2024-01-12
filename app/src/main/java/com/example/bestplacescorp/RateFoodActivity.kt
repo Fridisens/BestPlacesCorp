@@ -17,20 +17,17 @@ class RateFoodActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rate_food)
 
-
-
         foodNextButton = findViewById<Button>(R.id.foodNextButton)
         foodRatingBar = findViewById<RatingBar>(R.id.foodRatingBar)
 
         foodNextButton.setOnClickListener {
 
-            // Hämta värderingen från RatingBar
+            //Get info from RatingBar
             PlaceDataManager.currentPlace.foodRating = foodRatingBar.rating
 
-            // Fortsätt till nästa aktivitet
             val intent = Intent(this, RateDrinkActivity::class.java)
             startActivity(intent)
         }
 
-        }
     }
+}

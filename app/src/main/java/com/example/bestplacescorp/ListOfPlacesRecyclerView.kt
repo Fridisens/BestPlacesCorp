@@ -52,10 +52,7 @@ class ListOfPlacesRecyclerView : AppCompatActivity() {
                         restaurants.add(it)
                     }
                 }
-
                 adapter.notifyDataSetChanged()
-
             }
     }
-
 }

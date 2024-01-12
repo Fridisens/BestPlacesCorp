@@ -11,7 +11,7 @@ class ItemDecoration (private  val spaceHeight: Int) : RecyclerView.ItemDecorati
         parent: RecyclerView,
         state: RecyclerView.State
     ) {
-        // Lägger till mellanrum (topp/botten) till varje element i RecyclerView
+        //Add space between items in RecycleView
         outRect.top = spaceHeight
         outRect.bottom = spaceHeight
     }

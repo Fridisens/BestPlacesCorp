@@ -25,5 +25,5 @@ class RateDrinkActivity : AppCompatActivity() {
             val intent = Intent(this, RateServiceActivity::class.java)
             startActivity(intent)
         }
-        }
     }
+}
