@@ -16,8 +16,8 @@ class RateDrinkActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rate_drink)
 
-        drinkNextButton = findViewById<Button>(R.id.drinkNextButton)
-        drinkRatingBar = findViewById<RatingBar>(R.id.drinkRatingBar)
+        drinkNextButton = findViewById(R.id.drinkNextButton)
+        drinkRatingBar = findViewById(R.id.drinkRatingBar)
 
         drinkNextButton.setOnClickListener {
             PlaceDataManager.currentPlace.drinkRating = drinkRatingBar.rating

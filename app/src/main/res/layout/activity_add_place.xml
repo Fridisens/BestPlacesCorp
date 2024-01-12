@@ -18,7 +18,7 @@
             android:id="@+id/addSignedInButton"
             android:layout_width="131dp"
             android:layout_height="51dp"
-            android:layout_marginTop="152dp"
+            android:layout_marginTop="76dp"
             android:backgroundTint="#009688"
             android:fontFamily="serif-monospace"
             android:text="Lägg till"
@@ -31,7 +31,7 @@
             android:id="@+id/goBackButton"
             android:layout_width="116dp"
             android:layout_height="49dp"
-            android:layout_marginTop="312dp"
+            android:layout_marginTop="392dp"
             android:backgroundTint="#009688"
             android:fontFamily="serif-monospace"
             android:text="Logga ut"
@@ -47,7 +47,7 @@
             android:layout_height="197dp"
             android:layout_marginTop="50dp"
             android:fontFamily="serif-monospace"
-            android:text="Nu när du är inloggad kan du lägga till egna smultronställen till vår sida. Tryck Lägg till så kommer du få olika frågor som du behöver besvara för att vi ska få den bästa recensionen för våra kunder. "
+            android:text="Nu när du är inloggad kan du lägga till egna smultronställen till vår sida. Tryck Lägg till för att börja, eller välj Logga ut"
             android:textAlignment="center"
             android:textColor="#0B0909"
             android:textSize="20sp"
@@ -55,21 +55,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/infoTextView2"
-            android:layout_width="352dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="376dp"
-            android:fontFamily="serif-monospace"
-            android:text="Det är viktigt att du är så ärlig som du bara kan i din recension då det bara är det bästa som publiceras här."
-            android:textAlignment="center"
-            android:textColor="#FAF2F2"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.508"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

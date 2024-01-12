@@ -1,9 +1,11 @@
 package com.example.bestplacescorp
 
+import android.content.Intent
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.RatingBar
 import android.widget.TextView
 
@@ -13,6 +15,7 @@ class ShowMoreInfoAboutRestActivity : AppCompatActivity() {
     lateinit var restaurantName : TextView
     lateinit var restaurantOtherText: TextView
     lateinit var summaryRatingBar: RatingBar
+    lateinit var backButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,8 +24,9 @@ class ShowMoreInfoAboutRestActivity : AppCompatActivity() {
         restaurantName = findViewById(R.id.textView3)
         restaurantOtherText = findViewById(R.id.textView4)
         summaryRatingBar = findViewById(R.id.summaryRatingBar)
+        backButton = findViewById(R.id.backButton)
 
-        // get names from intents for each restaurant
+        // get info from intents for each restaurant from database
         val getRestaurantName = intent.getStringExtra("restaurantName")
         val getRestaurantOtherText = intent.getStringExtra("restaurantOtherText")
         val getFoodRating = intent.getFloatExtra("foodRating", 0.0f)
@@ -38,6 +42,11 @@ class ShowMoreInfoAboutRestActivity : AppCompatActivity() {
         val color = getColorForRating(averageRating)
         summaryRatingBar.progressDrawable.colorFilter = PorterDuffColorFilter(color, PorterDuff.Mode.SRC_ATOP)
 
+
+        backButton.setOnClickListener {
+            val intent = Intent(this, ListOfPlacesRecyclerView::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun getColorForRating(rating: Double): Int {
