@@ -11,14 +11,12 @@ import com.google.firebase.firestore.FirebaseFirestore
 class RateNameActivity : AppCompatActivity() {
 
     lateinit var nameRestaurantEditText : EditText
-    lateinit var latLongEditText: EditText
     lateinit var nameNextButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rate_name)
 
         nameRestaurantEditText = findViewById(R.id.nameRestaurantEditText)
-        latLongEditText = findViewById(R.id.latLongEditText)
         nameNextButton = findViewById(R.id.nameNextButton)
 
         nameNextButton.setOnClickListener {

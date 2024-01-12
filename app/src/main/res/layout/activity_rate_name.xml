@@ -20,20 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/latLongEditText"
-        android:layout_width="211dp"
-        android:layout_height="68dp"
-        android:layout_marginBottom="256dp"
-        android:ems="10"
-        android:fontFamily="serif-monospace"
-        android:hint="Long Lat"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/nameTextView"
         android:layout_width="wrap_content"
