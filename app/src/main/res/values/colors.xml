@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="highRatingColor">#4CAF50</color> <!-- Grön färg för högt betyg -->
+    <color name="mediumRatingColor">#FFC107</color> <!-- Gul färg för medelbetyg -->
+    <color name="lowRatingColor">#FF5722</color> <!-- Röd färg för lågt betyg -->
 </resources>

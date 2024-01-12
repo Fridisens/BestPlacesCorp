@@ -13,10 +13,7 @@ import com.google.firebase.ktx.Firebase
 
 class ListOfPlacesRecyclerView : AppCompatActivity() {
 
-    var restaurants = mutableListOf<Place>(
-    )
-
-
+    var restaurants = mutableListOf<Place>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -34,6 +31,9 @@ class ListOfPlacesRecyclerView : AppCompatActivity() {
             val intent = Intent(this, ShowMoreInfoAboutRestActivity::class.java)
             intent.putExtra("restaurantName", restaurant.name)
             intent.putExtra("restaurantOtherText", restaurant.otherText)
+            intent.putExtra("foodRating", restaurant.foodRating)
+            intent.putExtra("drinkRating",restaurant.drinkRating)
+            intent.putExtra("serviceRating", restaurant.serviceRating)
             startActivity(intent)
         }
         recyclerView.adapter = adapter
@@ -46,9 +46,6 @@ class ListOfPlacesRecyclerView : AppCompatActivity() {
         firestore.collection("places")
             .get()
             .addOnSuccessListener { querySnapshot ->
-                // Rensa befintliga data i listan innan du fyller på den
-                //restaurants.clear()
-
                 for (document in querySnapshot.documents){
                     val restaturant = document.toObject(Place::class.java)
                     restaturant?.let {
