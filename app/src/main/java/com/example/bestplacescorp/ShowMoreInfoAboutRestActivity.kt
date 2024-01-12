@@ -26,7 +26,7 @@ class ShowMoreInfoAboutRestActivity : AppCompatActivity() {
         summaryRatingBar = findViewById(R.id.summaryRatingBar)
         backButton = findViewById(R.id.backButton)
 
-        // get info from intents for each restaurant from database
+        // Get info from intents for each restaurant from database
         val getRestaurantName = intent.getStringExtra("restaurantName")
         val getRestaurantOtherText = intent.getStringExtra("restaurantOtherText")
         val getFoodRating = intent.getFloatExtra("foodRating", 0.0f)
